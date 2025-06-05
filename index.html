@@ -2,36 +2,149 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>个人主页导航</title>
+    <title>学生信息导航系统</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; }
-        h1 { color: #2c3e50; text-align: center; }
-        .nav-list { list-style: none; padding: 0; }
-        .nav-item { margin: 20px 0; text-align: center; }
-        a {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background: #f8f9fa;
         }
-        a:hover { background: #2980b9; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--background);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .class-group {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .class-group:hover {
+            transform: translateY(-2px);
+        }
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .student-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+        .student-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: var(--primary-color);
+            min-height: 60px;
+        }
+        .student-card:hover {
+            border-color: var(--secondary-color);
+            box-shadow: 0 3px 12px rgba(52,152,219,0.2);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .student-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>个人主页导航</h1>
-    <ul class="nav-list">
-        <li class="nav-item">
-            <a href="许语彤.html">林玟月的主页</a>
-        </li>
-        <li class="nav-item">
-            <a href="肖舜权.html">肖舜权的主页</a>
-        </li>
-        <li class="nav-item">
-            <a href="许语彤.html">许语彤的主页</a>
-        </li>
-    </ul>
+    <div class="container">
+        <h1>学生个人主页导航系统</h1>
+
+        <!-- 班级63 -->
+        <div class="class-group">
+            <h2>六年级3班</h2>
+            <div class="student-grid">
+                <a href="students/63常子墨.html" class="student-card">常子墨</a>
+                <a href="students/63洪一涵.html" class="student-card">洪一涵</a>
+                <a href="students/63匡俊诺.html" class="student-card">匡俊诺</a>
+                <a href="students/63卢倩瑶.html" class="student-card">卢倩瑶</a>
+                <a href="students/63梅笛.html" class="student-card">梅笛</a>
+                <a href="students/63潘晨.html" class="student-card">潘晨</a>
+                <a href="students/63石宇程.html" class="student-card">石宇程</a>
+                <a href="students/63苏亦语.html" class="student-card">苏亦语</a>
+                <a href="students/63温雅桐.html" class="student-card">温雅桐</a>
+                <a href="students/63谢思睿.html" class="student-card">谢思睿</a>
+                <a href="students/63赖梓昊.html" class="student-card">赖梓昊</a>
+            </div>
+        </div>
+
+        <!-- 班级64 -->
+        <div class="class-group">
+            <h2>六年级4班</h2>
+            <div class="student-grid">
+                <a href="students/64曾孟瞳.html" class="student-card">曾孟瞳</a>
+                <a href="students/64陈培钜.html" class="student-card">陈培钜</a>
+                <a href="students/64贺俊宁.html" class="student-card">贺俊宁</a>
+                <a href="students/64黎晨曦.html" class="student-card">黎晨曦</a>
+                <a href="students/64李晓宁.html" class="student-card">李晓宁</a>
+                <a href="students/64欧阳瑾轩.html" class="student-card">欧阳瑾轩</a>
+                <a href="students/64石悦希.html" class="student-card">石悦希</a>
+                <a href="students/64王浚赫.html" class="student-card">王浚赫</a>
+                <a href="students/64余浩轩.html" class="student-card">余浩轩</a>
+                <a href="students/64郑安欣.html" class="student-card">郑安欣</a>
+            </div>
+        </div>
+
+        <!-- 班级65 -->
+        <div class="class-group">
+            <h2>六年级5班</h2>
+            <div class="student-grid">
+                <a href="students/65卢冠羽.html" class="student-card">卢冠羽</a>
+                <a href="students/65王浩铭.html" class="student-card">王浩铭</a>
+                <a href="students/65向颖初.html" class="student-card">向颖初</a>
+                <a href="students/65赵思语.html" class="student-card">赵思语</a>
+                <a href="students/65左嘉佑.html" class="student-card">左嘉佑</a>
+            </div>
+        </div>
+
+        <!-- 班级66 -->
+        <div class="class-group">
+            <h2>六年级6班</h2>
+            <div class="student-grid">
+                <a href="students/66许语彤.html" class="student-card">许语彤</a>
+                <a href="students/66林玟月.html" class="student-card">林玟月</a>
+                <a href="students/66肖舜权.html" class="student-card">肖舜权</a>
+                <a href="students/66刘梓扬.html" class="student-card">刘梓扬</a>
+                <a href="students/66陈颖.html" class="student-card">陈颖</a>
+                <a href="students/66廖慧馨.html" class="student-card">廖慧馨</a>
+                <a href="students/66刘梓扬.html" class="student-card">刘梓扬</a>
+                <a href="students/66王梓瑶.html" class="student-card">王梓瑶</a>
+                <a href="students/66吴瀚哲.html" class="student-card">吴瀚哲</a>
+                <a href="students/66叶镇郝.html" class="student-card">叶镇郝</a>
+                <a href="students/66陈可萱.html" class="student-card">陈可萱</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
